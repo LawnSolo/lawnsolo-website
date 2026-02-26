@@ -258,10 +258,28 @@ src="https://www.google.com/maps?q=Louisville%20KY&output=embed">
 <footer>
 © 2026 Lawn Solo | Louisville Metropolitan Area
 </footer>
-
+<script>
+const sections = document.querySelectorAll('.section');
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+        if(position < screenPosition) {
+            section.style.opacity = 1;
+            section.style.transform = "translateY(0)";
+        }
+    });
+});
+sections.forEach(section => {
+    section.style.opacity = 0;
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "all 0.8s ease";
+});
+</script>
 </body>
 
 </html>
+
 
 
 
