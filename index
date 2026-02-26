@@ -8,12 +8,7 @@
 
 <meta name="description" content="Lawn Solo provides professional lawn mowing, landscaping, mulch installation, and seasonal cleanups in the Louisville Metropolitan Area. Call 502-555-5555 today for a free estimate.">
 
-<meta name="keywords" content="Louisville lawn care, lawn mowing Louisville, landscaping Louisville KY, Lawn Solo">
-
-<meta name="author" content="Lawn Solo">
-
 <style>
-
 :root {
     --black: #000000;
     --surface: #0f0f0f;
@@ -29,58 +24,37 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--black);
     color: white;
-    overflow-x: hidden;
 }
 
-/* Animated background glow */
-body::before {
-    content: "";
-    position: fixed;
-    top: -200px;
-    left: -200px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(57,255,20,0.15) 0%, transparent 70%);
-    animation: pulse 6s infinite alternate;
-    z-index: -1;
-}
-
-@keyframes pulse {
-    from { transform: scale(1); opacity: 0.4; }
-    to { transform: scale(1.3); opacity: 0.8; }
-}
-
+/* Header */
 header {
     text-align: center;
     padding: 60px 20px;
     background: var(--black);
 }
 
-/* 🔥 Responsive Logo */
+/* Responsive Logo (NO GLOW) */
 .logo {
     width: 100%;
     max-width: 900px;
     height: auto;
     display: block;
-    margin: 0 auto 30px auto;
-    filter: drop-shadow(0 0 20px var(--neon));
+    margin: 0 auto 40px auto;
 }
 
 h1 {
     font-size: clamp(28px, 5vw, 48px);
     color: var(--neon);
     margin-bottom: 10px;
-    text-shadow: 0 0 15px var(--neon);
 }
 
 h2 {
     color: var(--neon);
     margin-bottom: 20px;
     text-align: center;
-    font-size: 30px;
-    text-shadow: 0 0 10px var(--neon);
 }
 
+/* Buttons */
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
@@ -91,20 +65,20 @@ h2 {
     text-decoration: none;
     border-radius: 6px;
     transition: 0.3s ease;
-    box-shadow: 0 0 15px var(--neon);
 }
 
 .cta-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px var(--neon);
 }
 
+/* Sections */
 .section {
     padding: 80px 20px;
     max-width: 1100px;
     margin: auto;
 }
 
+/* Services Grid */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -121,19 +95,18 @@ h2 {
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px var(--neon);
+    transform: translateY(-8px);
 }
 
-/* Glowing divider */
+/* Divider */
 .divider {
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--neon), transparent);
     margin: 60px auto;
     max-width: 600px;
-    box-shadow: 0 0 15px var(--neon);
 }
 
+/* Contact Form */
 form {
     display: grid;
     gap: 15px;
@@ -147,12 +120,6 @@ input, textarea {
     border: 1px solid var(--neon);
     background: var(--surface);
     color: white;
-    transition: 0.3s;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    box-shadow: 0 0 15px var(--neon);
 }
 
 button {
@@ -163,14 +130,21 @@ button {
     cursor: pointer;
     border-radius: 6px;
     transition: 0.3s;
-    box-shadow: 0 0 15px var(--neon);
 }
 
 button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px var(--neon);
 }
 
+/* Map */
+iframe {
+    width: 100%;
+    height: 400px;
+    border: 1px solid var(--neon);
+    border-radius: 12px;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 40px;
@@ -179,12 +153,9 @@ footer {
     border-top: 1px solid var(--neon);
 }
 
-iframe {
-    width: 100%;
-    height: 400px;
-    border: 1px solid var(--neon);
-    border-radius: 12px;
-    box-shadow: 0 0 20px var(--neon);
+a {
+    color: var(--neon);
+    text-decoration: none;
 }
 
 </style>
@@ -194,7 +165,6 @@ iframe {
 
 <header>
 
-<!-- UPLOAD YOUR LOGO IMAGE TO GITHUB AND REPLACE filename.png -->
 <img src="logo.png" alt="Lawn Solo Logo" class="logo">
 
 <h1>Professional Lawn Care in Louisville</h1>
@@ -205,7 +175,9 @@ iframe {
 <a class="cta-button" href="mailto:manager@lawnsolo.com">Email Us</a>
 
 </header>
+
 <div class="divider"></div>
+
 <section class="section">
 <h2>Our Services</h2>
 
@@ -219,27 +191,33 @@ iframe {
 </div>
 
 </section>
+
 <div class="divider"></div>
+
 <section class="section">
 <h2>Service Area</h2>
-<p>We proudly serve the entire Louisville Metropolitan Area and surrounding communities.</p>
+<p style="text-align:center;">
+We proudly serve the entire Louisville Metropolitan Area and surrounding communities.
+</p>
 </section>
+
 <div class="divider"></div>
+
 <section class="section">
 <h2>Customer Reviews</h2>
 
-<!-- Replace the src link below with your actual Google Business embed link -->
 <iframe 
 src="https://www.google.com/maps?q=Louisville%20KY&output=embed">
 </iframe>
 
 </section>
+
 <div class="divider"></div>
+
 <section class="section">
 <h2>Request a Free Quote</h2>
 
-<!-- FREE FORM HANDLER: Replace with your Formspree link -->
-<form action="https://formspree.io/f/mzdayavl" method="POST">
+<form action="https://formspree.io/f/yourformid" method="POST">
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
 <input type="tel" name="phone" placeholder="Phone Number">
@@ -248,20 +226,20 @@ src="https://www.google.com/maps?q=Louisville%20KY&output=embed">
 </form>
 
 </section>
+
 <div class="divider"></div>
+
 <section class="section">
 <h2>Contact Us</h2>
-<p><strong>Phone:</strong> <a href="tel:5025555555" style="color:#39ff14;">502-555-5555</a></p>
-<p><strong>Email:</strong> <a href="mailto:manager@lawnsolo.com" style="color:#39ff14;">manager@lawnsolo.com</a></p>
+<p style="text-align:center;">
+<strong>Phone:</strong> <a href="tel:5025555555">502-555-5555</a><br>
+<strong>Email:</strong> <a href="mailto:manager@lawnsolo.com">manager@lawnsolo.com</a>
+</p>
 </section>
-<div class="divider"></div>
+
 <footer>
 © 2026 Lawn Solo | Louisville Metropolitan Area
 </footer>
 
 </body>
-
 </html>
-
-
-
